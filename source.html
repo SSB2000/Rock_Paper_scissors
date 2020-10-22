@@ -18,6 +18,11 @@
         function game() {
             for(let i = 0; i < 5; i++) {
                 const playerSelection = window.prompt("Enter you choice.").toLowerCase();
+                if(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissor") {
+                    console.log("Please enter a valid choice : \nrock? \npaper? \nscissor?\n");
+                    i--;
+                    continue;
+                }
                 const computerSelection = computerPlay();
                 console.log("The computer chose: " + computerSelection);
                 console.log("You chose: " + playerSelection);
