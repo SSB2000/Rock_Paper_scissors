@@ -18,7 +18,7 @@
         function game() {
             for(let i = 0; i < 5; i++) {
                 const playerSelection = window.prompt("Enter you choice.").toLowerCase();
-                if(playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissor") {
+                if((playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissor") || (playerSelection == "")) {
                     console.log("Please enter a valid choice : \nrock? \npaper? \nscissor?\n");
                     i--;
                     continue;
